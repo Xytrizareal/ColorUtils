@@ -8,6 +8,7 @@ class ColorConverter
         Console.WriteLine("Enter a color (hex or RGB): ");
         string color = Console.ReadLine();
         PrintColorValues(color);
+        Console.ReadLine();
     }
 
     public static (int, int, int) HexToRgb(string hexColor)
@@ -149,8 +150,6 @@ class ColorConverter
         else
         {
             Console.WriteLine("Invalid color format. Please enter a hex color (example: #ffffff) or an RGB color (example: 255, 255, 255).");
-
-            Console.ReadLine();
             return;
         }
 
@@ -165,7 +164,5 @@ class ColorConverter
         Console.WriteLine($"HSL\t{Math.Round(hsl.Item1)}°, {Math.Round(hsl.Item2 * 100)}%, {Math.Round(hsl.Item3 * 100)}%\thsl({Math.Round(hsl.Item1)}, {Math.Round(hsl.Item2 * 100)}%, {Math.Round(hsl.Item3 * 100)}%)");
         Console.WriteLine($"HSV\t{Math.Round(hsv.Item1)}°, {Math.Round(hsv.Item2 * 100)}%, {Math.Round(hsv.Item3 * 100)}%\thsv({Math.Round(hsv.Item1)}, {Math.Round(hsv.Item2 * 100)}%, {Math.Round(hsv.Item3 * 100)}%)");
         Console.WriteLine($"CMYK\t{Math.Round(cmyk.c * 100)}%, {Math.Round(cmyk.m * 100)}%, {Math.Round(cmyk.y * 100)}%, {Math.Round(cmyk.k * 100)}%\t");
-
-        Console.ReadLine();
     }
 }
